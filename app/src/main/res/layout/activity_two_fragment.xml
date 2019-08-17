@@ -1,0 +1,120 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="@color/bg_white" >
+
+
+
+    <Button
+        android:id="@+id/bt_playUrl1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="播放网络多媒体"
+        android:visibility="gone" />
+    <RelativeLayout
+        android:id="@+id/rlayout_video"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        >
+
+        <SurfaceView
+            android:id="@+id/sv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/text_prey"
+            android:layout_alignParentTop="true">
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/bg_white"
+                />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/image_clickplay_moren"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="center"
+            android:src="@drawable/videoplayer_clickplay"
+            />
+
+        <ImageView
+            android:id="@+id/image_clickplay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="center"
+            android:src="@drawable/videoplayer_clickplay"
+            android:visibility="gone"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <Button
+                android:id="@+id/bt_pause"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/videoplayer_pause"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="10dp"/>
+            <TextView
+                android:id="@+id/tv_currentProgress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="9dp"
+                android:text="00:00"
+                android:textColor="@color/text_white"
+                android:layout_gravity="center_vertical"
+                />
+
+            <SeekBar
+                android:id="@+id/seekBar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"/>
+
+            <TextView
+                android:id="@+id/tv_totalProgress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="9dp"
+                android:textColor="@color/text_white"
+                android:layout_gravity="center_vertical"
+                />
+
+            <Button
+                android:id="@+id/bt_maxsize"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/videoplayer_maxsize"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"/>
+            <Button
+                android:id="@+id/bt_minisize"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/videoplayer_minisize"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>
